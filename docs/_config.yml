@@ -31,6 +31,9 @@ github_username:  NicolaasWeideman
 remote_theme: jekyll/minima
 minima:
   skin: dark
+  social_links:
+    - { platform: github,  user_url: "https://github.com/NicolaasWeideman/" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/nicolaas-weideman/" }
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
