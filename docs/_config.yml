@@ -29,6 +29,7 @@ github_username:  NicolaasWeideman
 
 header_pages:
     - software.markdown
+    - ctf.markdown
     - about.markdown
 
 # Build settings
