@@ -7,6 +7,18 @@ permalink: /software/
 * TOC
 {:toc}
 
+## Projects
+
+### Binalyzer
+[Binalyzer](https://github.com/usc-isi-bass/binalyzer) is an implementation of a [thread-pool](https://en.wikipedia.org/wiki/Thread_pool).
+Mainly, it was created to facilitate running a binary program analysis on multiple targets (binary executables) concurrently.
+Here are its key features:
+1. Per-task timeouts - A time limit may be set such that each task that exceeds this limit will timeout. Subsequent and parallel tasks are unaffected. This is in contrast to Python's [multiprocessing.pool](https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.pool) where the time limit applies to the whole thread pool.
+2. Intermediate results saved to disk - The results returned by each completed task, are stored to disk as [json-pickled](https://github.com/jsonpickle/jsonpickle) Python objects.
+3. Progress tracking - Print how many tasks have been completed and an expected time remaining.
+4. Target discovery - Point it to a directory and it will automatically search all subdirectories for ELF files. You can also give it a file containing the paths to ELF files.
+5. Argument parser - You can use the Binalyzer argument parser as a parent to your own so you don't have to respecify the command line arguments specific to Binalyzer (number of processes to use, timeout duration, target root directory, etc).
+
 ## Open Source Contributions
 
 ### angr
