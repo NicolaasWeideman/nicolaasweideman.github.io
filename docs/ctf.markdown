@@ -11,5 +11,6 @@ You can find my writeups for various CTF challenges that I have solved [here](ht
 
 ## Created Challenges
 I have also created challenges for CTFs:
-+ [USC CTF Fall 2023](https://github.com/USC-CTF-Team/public-USC-CTF-Fall-23/tree/main/reverse_engineering)
++ [USC CTF Fall 2023](https://github.com/Live10NOP/CTF_Challenges/tree/main/usc_ctf_fall_2023)
++ [USC CTF Spring 2023](https://github.com/Live10NOP/CTF_Challenges/tree/main/usc_ctf_spring_2023)
 
