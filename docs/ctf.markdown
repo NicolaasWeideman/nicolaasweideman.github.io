@@ -13,4 +13,7 @@ You can find my writeups for various CTF challenges that I have solved [here](ht
 I have also created challenges for CTFs:
 + [USC CTF Fall 2023](https://github.com/Live10NOP/CTF_Challenges/tree/main/usc_ctf_fall_2023)
 + [USC CTF Spring 2023](https://github.com/Live10NOP/CTF_Challenges/tree/main/usc_ctf_spring_2023)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 32bffb956714be6b6e0ec459866d503ff41799a2
