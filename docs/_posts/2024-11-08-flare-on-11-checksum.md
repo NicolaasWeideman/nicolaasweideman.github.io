@@ -33,7 +33,7 @@ The purpose of Phase 3 is only to recover the flag after the challenge has been 
 ## Phase 1:
 In Phase 1, the challenge binary loops a random number of times (between 3 and 7) and prints a random math problem to the user: `x + y` for random integers `x` and `y`.
 If the user enters an incorrect answer to the problem, the challenge binary exits.
-Otherwise, if all answers are correct, the program continues.
+Otherwise, if all answers are correct, the program continues to Phase 2.
 Phase 1 does not actively contribute to the challenge (it is unrelated to the flag) and is only a speedbump.
 You can deal with Phase 1 in one of three ways:
 1. You can solve the problems manually.
@@ -47,7 +47,7 @@ From the decompiled code (below), we see that the program takes the user input  
 If the return value of `main.a` (`bVar3`) is `false`, a failure message is printed `gostr_Maybe_it's_time_to_analyze_the_b` `[3]`.
 Therefore, **we need to determine what `checksum` should be in order to make `main.a` return `true`**.
 So, we investigate the function `main.a`.
-```C
+```c
 // Function: main.main
 local_68.data = local_10; // [1]
 local_68._type = &*string___internal/abi.PtrType.Type;
@@ -97,7 +97,7 @@ If the length is correct, it compares the generated string to some expected stri
 `"cQoFRQErX1YAVw1zVQdFUSxfAQNRBXUNAxBSe15QCVRVJ1pQEwd/WFBUAlElCFBFUnlaB1ULByRdBEFdfVtWVA=="` (`[5]`).
 If the comparison is equal, `main.a` returns `true`.
 Therefore, we need to determine what value for `checksum` will generate a string with the expected string as base64 encoding.
-```C
+```c
 // Function: bool main::main.a(string checksum)
   len = checksum.len; // [1]
 puVar2 = (uintptr *)checksum.str; // [1]
@@ -179,7 +179,7 @@ After entering the correct checksum, the program uses this checksum to decrypt t
 `C:\Users\vboxuser\AppData\Local\REAL_FLAREON_FLAG.JPG`.
 We recover this file name and path from the lines in the decompilation of `main.main` listed below.
 The function `os::os.UserCacheDir()` on Windows yields the path `C:\Users\<username>\AppData\Local\`.
-```C
+```c
 // main.main
   oVar15 = os::os.UserCacheDir();
   local_170 = oVar15.~r0.len;
