@@ -34,6 +34,11 @@ The purpose of Phase 3 is only to recover the flag after the challenge has been 
 In Phase 1, the challenge binary loops a random number of times (between 3 and 7) and prints a random math problem to the user: `x + y` for random integers `x` and `y`.
 If the user enters an incorrect answer to the problem, the challenge binary exits.
 Otherwise, if all answers are correct, the program continues to Phase 2.
+We show the decompiled code of Phase 1 in the figure below.
+<br>
+<img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/flareon_11_checksum_phase1.png">
+<br>
+
 Phase 1 does not actively contribute to the challenge (it is unrelated to the flag) and is only a speedbump.
 You can deal with Phase 1 in one of three ways:
 1. You can solve the problems manually.
